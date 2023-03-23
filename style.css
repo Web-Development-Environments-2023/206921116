@@ -48,21 +48,24 @@
 }
 
 
+
 #photos img {
   max-width: 100%;
   height: auto;
 }
 
-
 .photo-container {
   display: flex;
   justify-content: center;
+  height: 300px; /* adjust height to your preference */
+  overflow-x: scroll; /* add horizontal scroll if images overflow */
 }
 
 .photo-container img {
   max-width: 100%;
-  height: auto;
+  max-height: 100%;
   margin: 0 10px;
 }
+
 
 
