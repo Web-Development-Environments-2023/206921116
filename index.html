@@ -3,16 +3,59 @@
 <head>
 <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
+<style>
+  /* Style for the menu */
+  #menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #333;
+    color: white;
+    padding: 1em;
+    z-index: 1;
+  }
+
+  #menu a {
+    color: white;
+    text-decoration: none;
+    margin: 0 1em;
+    font-weight: bold;
+    font-size: 1.2em;
+  }
+
+  #menu a:hover {
+    text-decoration: underline;
+  }
+
+  /* Style for the sections */
+  .section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .section h1 {
+    font-size: 3em;
+    margin-bottom: 1em;
+  }
+</style>
+
 <body>
-<div id="menu">
-<li><a href="#about">About Me</a></li>
-<li><a href="#photos">My Photos</a></li>
-<li><a href="#playlist">My Playlist</a></li>
-<li><a href="#like">Like</a></li>
-<li><a href="#qrcoder">QR code</a></li>
-<li><a href="#spa">Q&A</a></li>
-<li><a href="#contact">Contact Me</a></li>
-</div>
+  <div id="menu">
+    <a href="#about">About Me</a>
+    <a href="#photos">My Photos</a>
+    <a href="#playlist">My Playlist</a>
+    <a href="#like">Like</a>
+    <a href="#qrcoder">QR code</a>
+    <a href="#spa">Q&A</a>
+    <a href="#contact">Contact Me</a>
+  </div>
 		  
 <section id="about" class="section">
 <br/>
