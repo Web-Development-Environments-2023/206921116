@@ -1,9 +1,43 @@
 #menu {
-	position: fixed;
-	width: 100%;
-	height: 35px;
-	background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #4c4c4c;
+  color: white;
+  padding: 1em;
+  z-index: 1;
 }
+
+#menu a {
+  color: white;
+  text-decoration: none;
+  margin: 0 1.5em;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+#menu a:hover {
+  text-decoration: underline;
+}
+
+/* Style for the sections */
+.section {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.section h1 {
+  font-size: 3em;
+  margin-bottom: 1em;
+}
+
 
 
 .photo-container {
