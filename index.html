@@ -124,6 +124,61 @@ I have old and tired friends called Amazia, Karako, Hector and Avi. We are unemp
       </p>
    <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+      /* Add styles for the form */
+      form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+      }
+
+      label {
+        font-size: 18px;
+        margin-bottom: 10px;
+      }
+
+      textarea {
+        height: 600px;
+        width: 80%;
+        font-size: 2em;
+        margin-bottom: 400px;
+        text-align: center;
+      }
+
+      .emoji-container {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+      }
+
+      .emoji-button {
+        margin: 0 20px;
+        font-size: 200px;
+        cursor: pointer;
+      }
+
+      .submit-button {
+        padding: 20px 40px;
+        background-color: #4CAF50;
+        color: white;
+        font-size: 2em;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      .submit-button:hover {
+        background-color: #3e8e41;
+      }
+      
+      /* Add styles to center the form */
+      #contact {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
   <h1>Send Email Form</h1>
   
 <form onsubmit="removePrefix()" action="mailto:shirasorek11@gmail.com?subject=New%20Mail%20from%20Your%20Network&body=">
