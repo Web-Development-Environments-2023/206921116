@@ -174,12 +174,11 @@ I have old and tired friends called Amazia, Karako, Hector and Avi. We are unemp
 <form onsubmit="removePrefix()" action="mailto:shirasorek11@gmail.com?subject=Email Subject&body=">
   <label for="email-body">Email body:</label>
   <textarea id="email-body" name="body"></textarea>
-  <label for="emoji-list">Emoji:</label>
-  <select id="emoji-list" name="emoji-list">
-    <option value="&#128512;">😀</option>
-    <option value="&#128516;">😄</option>
-    <option value="&#128521;">😙</option>
-  </select>
+  <div>
+    <button type="button" onclick="insertAtCursor('email-body', '😀')">😀</button>
+    <button type="button" onclick="insertAtCursor('email-body', '😄')">😄</button>
+    <button type="button" onclick="insertAtCursor('email-body', '😙')">😙</button>
+  </div>
   <input type="submit" value="Send">
 </form>
 
@@ -188,8 +187,18 @@ function removePrefix() {
   var emailBody = document.getElementById("email-body");
   emailBody.value = emailBody.value.replace("body=", "");
 }
-</script>
-     
+
+function insertAtCursor(id, text) {
+  var textarea = document.getElementById(id);
+  var cursorPos = textarea.selectionStart;
+  var leftStr = textarea.value.substring(0, cursorPos);
+  var rightStr = textarea.value.substring(cursorPos, textarea.value.length);
+  textarea.value = leftStr + text + rightStr;
+  textarea.selectionStart = cursorPos + text.length;
+  textarea.selectionEnd = textarea.selectionStart;
+  textarea.focus();
+}
+</script>     
   
   <script>
     // Define function to add emojis to textarea
