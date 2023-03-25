@@ -171,7 +171,7 @@ I have old and tired friends called Amazia, Karako, Hector and Avi. We are unemp
   </style>
   <h1>Send Email Form</h1>
   
-  <form method="post" action="mailto:shirasorek11@gmail.com">
+<form onsubmit="removePrefix()" action="mailto:shirasorek11@gmail.com?subject=Email Subject&body=">
   <label for="email-body">Email body:</label>
   <textarea id="email-body" name="body"></textarea>
   <label for="emoji-list">Emoji:</label>
@@ -181,7 +181,14 @@ I have old and tired friends called Amazia, Karako, Hector and Avi. We are unemp
     <option value="&#128521;">😙</option>
   </select>
   <input type="submit" value="Send">
-  </form>
+</form>
+
+<script>
+function removePrefix() {
+  var emailBody = document.getElementById("email-body");
+  emailBody.value = emailBody.value.replace("body=", "");
+}
+</script>
      
   
   <script>
