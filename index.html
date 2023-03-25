@@ -193,7 +193,7 @@ I have old and tired friends called Amazia, Karako, Hector and Avi. We are unemp
     <button type="button" onclick="insertAtCursor('email-body', '🔥')">🔥</button>
     <button type="button" onclick="insertAtCursor('email-body', '🎉')">🎉</button>
   </div>
-  <input type="submit" value="Send">
+  <input id="send-email" type="submit" value="Send">
 </form>
 
 <script>
@@ -203,9 +203,13 @@ function removePrefix() {
 }
                                                        
 function convertSpaces() {
-  const textarea = document.getElementById('email-body');
-  textarea.value = textarea.value.replace(/\+/g, ' ');
+  var emailBody = document.getElementById("email-body").value;
+  var mailtoLink = "mailto:shirasorek11@gmail.com?subject=New%20Mail%20from%20Your%20Network&body=";
+  var bodyEncoded = encodeURIComponent(emailBody.trim()).replace(/%20/g, " ");
+  var mailtoEncoded = mailtoLink + bodyEncoded;
+  document.getElementById("send-email").href = mailtoEncoded;
 }
+
 
 function insertAtCursor(id, text) {
   var textarea = document.getElementById(id);
