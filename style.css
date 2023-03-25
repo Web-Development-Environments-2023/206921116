@@ -33,27 +33,40 @@
 }
 
 textarea {
-  font-size: 50em; /* adjust the font size to your liking */
-  width: 1500px; /* adjust the width to your liking */
-  height: 2000px; /* adjust the height to your liking */
+  height: 2400px;
+  width: 80%;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.emoji-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
 }
 
 .emoji-button {
-  margin: 0 10px;
-  font-size: 1000px;
+  margin: 0 20px;
+  font-size: 200px;
   cursor: pointer;
 }
 
 .submit-button {
-  padding: 10px 20px;
+  padding: 20px 40px;
   background-color: #4CAF50;
   color: white;
-  font-size: 1000%;
+  font-size: 50px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+.submit-button:hover {
+  background-color: #3e8e41;
+}
 
 
 /* Style for the sections */
