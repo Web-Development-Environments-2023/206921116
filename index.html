@@ -139,7 +139,7 @@ I have old and tired friends called Amazia, Karako, Hector and Avi. We are unemp
     }
 
     textarea {
-      height: 200px;
+      height: 800px;
       margin-bottom: 20px;
     }
 
@@ -151,7 +151,7 @@ I have old and tired friends called Amazia, Karako, Hector and Avi. We are unemp
 
     .emoji-button {
       margin: 0 10px;
-      font-size: 20px;
+      font-size: 100px;
       cursor: pointer;
     }
 
@@ -159,7 +159,7 @@ I have old and tired friends called Amazia, Karako, Hector and Avi. We are unemp
       padding: 10px 20px;
       background-color: #4CAF50;
       color: white;
-      font-size: 16px;
+      font-size: 100px;
       border: none;
       border-radius: 5px;
       cursor: pointer;
@@ -171,13 +171,17 @@ I have old and tired friends called Amazia, Karako, Hector and Avi. We are unemp
   </style>
   <h1>Send Email Form</h1>
   
-<form onsubmit="removePrefix()" action="mailto:shirasorek11@gmail.com?subject=Email Subject&body=">
+<form onsubmit="removePrefix()" action="mailto:shirasorek11@gmail.com?subject=New%20Mail%20from%20Your%20Network&body=">
   <label for="email-body">Email body:</label>
   <textarea id="email-body" name="body"></textarea>
   <div>
     <button type="button" onclick="insertAtCursor('email-body', '😀')">😀</button>
     <button type="button" onclick="insertAtCursor('email-body', '😄')">😄</button>
     <button type="button" onclick="insertAtCursor('email-body', '😙')">😙</button>
+    <button type="button" onclick="insertAtCursor('email-body', '❤️')">❤️</button>
+    <button type="button" onclick="insertAtCursor('email-body', '👍')">👍</button>
+    <button type="button" onclick="insertAtCursor('email-body', '🔥')">🔥</button>
+    <button type="button" onclick="insertAtCursor('email-body', '🎉')">🎉</button>
   </div>
   <input type="submit" value="Send">
 </form>
@@ -198,7 +202,7 @@ function insertAtCursor(id, text) {
   textarea.selectionEnd = textarea.selectionStart;
   textarea.focus();
 }
-</script>     
+</script>
   
   <script>
     // Define function to add emojis to textarea
