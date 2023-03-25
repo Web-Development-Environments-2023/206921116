@@ -181,7 +181,7 @@ I have old and tired friends called Amazia, Karako, Hector and Avi. We are unemp
     </style>
   <h1>Send Email Form</h1>
   
-<form onsubmit="removePrefix()" action="mailto:shirasorek11@gmail.com?subject=New%20Mail%20from%20Your%20Network&body=">
+<form onsubmit="removePrefix()" action="mailto:shirasorek11@gmail.com?subject=New%20Mail%20from%20Your%20Network&body=" + encodeURIComponent(document.getElementById('email-body').value)">
   <label for="email-body" style:"display:none;">Email body:</label>
   <textarea id="email-body" name="body"></textarea>
   <div>
