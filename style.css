@@ -45,6 +45,10 @@ textarea {
   margin-bottom: 20px;
 }
 
+.emoji-button{
+    transform: scale(8);
+}
+
 
 .submit-button {
   padding: 20px 40px;
