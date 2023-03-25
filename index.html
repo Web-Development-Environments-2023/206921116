@@ -122,6 +122,83 @@ I have old and tired friends called Amazia, Karako, Hector and Avi. We are unemp
     <h1 style="font-size: 5em; margin-bottom: 1em;">Contact Me</h1>
     <p style="text-align: center; line-height: 1.5;">
       </p>
+   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    /* Add styles for the form */
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 20px;
+    }
+
+    label {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    textarea {
+      height: 200px;
+      margin-bottom: 20px;
+    }
+
+    .emoji-container {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    .emoji-button {
+      margin: 0 10px;
+      font-size: 20px;
+      cursor: pointer;
+    }
+
+    .submit-button {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .submit-button:hover {
+      background-color: #3e8e41;
+    }
+  </style>
+  <h1>Send Email Form</h1>
+  <form>
+    <label for="email-body">Email Body:</label>
+    <textarea id="email-body" name="email-body"></textarea>
+    <div class="emoji-container">
+      <button class="emoji-button" type="button" onclick="addEmoji('😀')">😀</button>
+      <button class="emoji-button" type="button" onclick="addEmoji('😂')">😂</button>
+      <button class="emoji-button" type="button" onclick="addEmoji('😍')">😍</button>
+      <button class="emoji-button" type="button" onclick="addEmoji('👍')">👍</button>
+      <button class="emoji-button" type="button" onclick="addEmoji('❤️')">❤️</button>
+      <button class="emoji-button" type="button" onclick="addEmoji('🔥')">🔥</button>
+      <button class="emoji-button" type="button" onclick="addEmoji('🎉')">🎉</button>
+      <button class="emoji-button" type="button" onclick="addEmoji('🚀')">🚀</button>
+    </div>
+    <button class="submit-button" type="submit">Send Email</button>
+  </form>
+  
+  <script>
+    // Define function to add emojis to textarea
+    function addEmoji(emoji) {
+      var textarea = document.getElementById("email-body");
+      var cursorPosition = textarea.selectionStart;
+      var textBeforeCursorPosition = textarea.value.substring(0, cursorPosition);
+      var textAfterCursorPosition = textarea.value.substring(cursorPosition, textarea.value.length);
+      textarea.value = textBeforeCursorPosition + emoji + textAfterCursorPosition;
+      textarea.selectionStart = cursorPosition + emoji.length;
+      textarea.selectionEnd = cursorPosition + emoji.length;
+      textarea.focus();
+    }
+  </script>
 </section>
 
 
