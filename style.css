@@ -33,14 +33,14 @@
 }
 
 textarea {
-  font-size: 15em; /* adjust the font size to your liking */
-  width: 500px; /* adjust the width to your liking */
-  height: 300px; /* adjust the height to your liking */
+  font-size: 50em; /* adjust the font size to your liking */
+  width: 1500px; /* adjust the width to your liking */
+  height: 2000px; /* adjust the height to your liking */
 }
 
 .emoji-button {
   margin: 0 10px;
-  font-size: 300px;
+  font-size: 1000px;
   cursor: pointer;
 }
 
@@ -48,7 +48,7 @@ textarea {
   padding: 10px 20px;
   background-color: #4CAF50;
   color: white;
-  font-size: 300%;
+  font-size: 1000%;
   border: none;
   border-radius: 5px;
   cursor: pointer;
