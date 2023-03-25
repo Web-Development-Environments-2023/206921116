@@ -204,7 +204,7 @@ function removePrefix() {
                                                        
 function convertSpaces() {
   const textarea = document.getElementById('email-body');
-  textarea.value = textarea.value.replace(/ /g, '%20');
+  textarea.value = textarea.value.replace(/\+/g, ' ');
 }
 
 function insertAtCursor(id, text) {
