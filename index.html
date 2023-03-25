@@ -182,7 +182,7 @@ I have old and tired friends called Amazia, Karako, Hector and Avi. We are unemp
     </style>
   <h1>Send Email Form</h1>
   
-<form onsubmit="convertSpaces();" action="mailto:shirasorek11@gmail.com?subject=New%20Mail%20from%20Your%20Network&body=" method="post" enctype="text/plain" style="display: flex; flex-direction: column; align-items: center;">
+<form onsubmit="removePrefix(); convertSpaces()" action="mailto:shirasorek11@gmail.com?subject=New%20Mail%20from%20Your%20Network&body=" + encodeURIComponent(document.getElementById('email-body').value)">
   <label for="email-body" style:"display:none;">Email body:</label>
   <textarea id="email-body" name="body"></textarea>
   <div>
@@ -194,7 +194,7 @@ I have old and tired friends called Amazia, Karako, Hector and Avi. We are unemp
     <button type="button" onclick="insertAtCursor('email-body', '🔥')">🔥</button>
     <button type="button" onclick="insertAtCursor('email-body', '🎉')">🎉</button>
   </div>
-  <input id="send-email" type="submit" value="Send" onclick="removePrefix()">
+  <input id="send-email" type="submit" value="Send">
 </form>
 
 <script>
