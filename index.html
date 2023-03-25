@@ -141,7 +141,7 @@ I have old and tired friends called Amazia, Karako, Hector and Avi. We are unemp
       textarea {
         height: 600px;
         width: 200%;
-        font-size: 10em;
+        font-size: 6em;
         margin-bottom: 400px;
         text-align: center;
       }
@@ -182,7 +182,7 @@ I have old and tired friends called Amazia, Karako, Hector and Avi. We are unemp
   <h1>Send Email Form</h1>
   
 <form onsubmit="removePrefix()" action="mailto:shirasorek11@gmail.com?subject=New%20Mail%20from%20Your%20Network&body=">
-  <label for="email-body">Email body:</label>
+  <label for="email-body" style:"display:none;">Email body:</label>
   <textarea id="email-body" name="body"></textarea>
   <div>
     <button type="button" onclick="insertAtCursor('email-body', '😀')">😀</button>
