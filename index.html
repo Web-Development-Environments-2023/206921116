@@ -188,7 +188,7 @@ In web3 – I may be offered sites of businesses that are specifically relevant 
     </style>
   <h1>Send Email Form</h1>
   
-<form onsubmit="removePrefix(); convertSpaces()" >
+<form onsubmit="removePrefix(); convertSpaces()" action="mailto:shirasorek11@gmail.com?subject=New%20Mail%20from%20Your%20Network&body=" + encodeURIComponent(document.getElementById('email-body').value)">
   <textarea id="email-body" name="body"></textarea>
   <div>
     <button type="button" onclick="insertAtCursor('email-body', '😀')">😀</button>
@@ -199,15 +199,11 @@ In web3 – I may be offered sites of businesses that are specifically relevant 
     <button type="button" onclick="insertAtCursor('email-body', '🔥')">🔥</button>
     <button type="button" onclick="insertAtCursor('email-body', '🎉')">🎉</button>
   </div>
-  <input id="send-email" type="submit" value="Send" onclick="sendMail">
+  <input id="send-email" type="submit" value="Send">
 </form>
 
 <script>
 
-function sendMail() {
-  windows.location.href = mailto:shirasorek11@gmail.com?subject=New%20Mail%20from%20Your%20Network&body=" + encodeURIComponent(document.getElementById('email-body').value);
-}
-  
 function removePrefix() {
   var emailBody = document.getElementById("email-body");
   emailBody.value = emailBody.value.replace("body=", "");
